@@ -9,7 +9,9 @@
 </div>
 
 > **Unofficial.** Not affiliated with or endorsed by SteelSeries. You flash your own headset at your own risk
-> (see [Risks](#-risks)). Firmware files belong to SteelSeries and are never included in this repository.
+> (see [Risks](#-risks)). The repository contains no firmware: the scripts patch the copy GG already installed on
+> your PC. The [release](../../releases) also ships a ready-made patched copy of the Arctis 7 headset firmware,
+> which is SteelSeries' work, **not covered by the MIT license**, and provided for convenience only.
 
 SteelSeries says the Arctis 7 low-battery alert [cannot be disabled](https://support.steelseries.com/hc/en-us/articles/10000346317581-How-do-I-disable-the-low-battery-alert-on-my-Arctis-7).
 It is just a tone stored in the headset firmware, so this project mutes that one tone and leaves everything else
@@ -30,7 +32,12 @@ alone: same version, same threshold (about 20 %), same other sounds.
 
 ## ⚡ Quick start
 
-Two scripts. Neither needs anything installed beyond Python 3 and PowerShell.
+**Fastest:** download `firmware-arctis-7-2018-rx-v1.19.0.ef` and `install.ps1` from the [latest release](../../releases/latest),
+put them in the same folder, then run `install.ps1 install` from an administrator PowerShell
+(`powershell -ExecutionPolicy Bypass -File .\install.ps1 install`) and follow the steps below.
+That ready-made firmware is only valid for GG 120.0.0 / firmware 1.19.0.0.
+
+**Build it yourself** (any GG or firmware version): two scripts, nothing to install beyond Python 3 and PowerShell.
 
 ```powershell
 python patch_lowbat.py                                              # 1. build the patched firmware into .\out\

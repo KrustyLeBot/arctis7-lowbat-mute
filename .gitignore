@@ -1,4 +1,4 @@
-# SteelSeries firmware files belong to SteelSeries: do not publish them
+# SteelSeries firmware files belong to SteelSeries: keep them out of the source tree (only the release ships a patched copy)
 out/
 *.ef
 *.ff
