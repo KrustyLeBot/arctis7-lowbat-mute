@@ -1,0 +1,5 @@
+# SteelSeries firmware files belong to SteelSeries: do not publish them
+out/
+*.ef
+*.ff
+*.bak
